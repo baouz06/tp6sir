@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+</head>
+<body ng-app>
+
+<div>
+IdP: <input type="text" ng-model='idPok'></br>
+Nom: <input type="text" ng-model="nomPok">
+<select>
+<option></option>
+<option></option>
+</select>
+<input type="submit" value="Get">
+</div>
+<br>
+id et nom : {{idPok+ " " + nomPok}}
+
+	
+
+    <!-- Dependencies -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-resource.min.js"></script>
+
+    <!-- Pokedex app -->
+    <script src="js/pokedex.js"></script>
+
+
+</body>
+</html>
+
