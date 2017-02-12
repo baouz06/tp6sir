@@ -14,10 +14,13 @@
 		Nom: <input type="text" ng-model="nomPok">
 		<input type="submit" value="Get">
 		<h3>la liste des pokémons</h3>
-        
-            {{listPoke}} </br> </br> </br> 
-         <strong style=" align-content: center"> veuillez remplir les champs id et nom pour les faire aparaite en dessous</strong>
-           <p> id et nom : {{idPok+ " " + nomPok}} </p>
+    	<select > 
+    	         
+           		<option ng-repeat="poke in listPoke |filter:idPok |filter:nomPok"> {{poke}} </option>
+    	</select>
+            </br> </br> </br> 
+         <strong > veuillez remplir les champs id et nom pour les faire aparaite en dessous</strong>
+          		 <p> id et nom : {{idPok+ " " + nomPok}} </p>
 		
 	</div>
 	
