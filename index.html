@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+<meta charset="UTF-8">
+<title></title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
 
 </head>
-<body ng-app>
+<body ng-app="myApp">
 
-<div>
-IdP: <input type="text" ng-model='idPok'></br>
-Nom: <input type="text" ng-model="nomPok">
-<select>
-<option></option>
-<option></option>
-</select>
-<input type="submit" value="Get">
-</div>
-<br>
-id et nom : {{idPok+ " " + nomPok}}
-
+	<div ng-controller="PokeController">
+		IdP: <input type="text" ng-model='idPok'></br>
+		Nom: <input type="text" ng-model="nomPok">
+		<input type="submit" value="Get">
+		<h3>la liste des pokémons</h3>
+        
+            {{listPoke}} </br> </br> </br> 
+         <strong style=" align-content: center"> veuillez remplir les champs id et nom pour les faire aparaite en dessous</strong>
+           <p> id et nom : {{idPok+ " " + nomPok}} </p>
+		
+	</div>
 	
 
-    <!-- Dependencies -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-resource.min.js"></script>
 
-    <!-- Pokedex app -->
-    <script src="js/pokedex.js"></script>
+	<!-- Dependencies -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/angular-resource.min.js"></script>
+
+	<!-- Pokedex app -->
+	<script src="js/pokedex.js"></script>
 
 
 </body>
