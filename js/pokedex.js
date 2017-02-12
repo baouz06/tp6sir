@@ -8,8 +8,8 @@ pokeApp.config([ '$resourceProvider', function($resourceProvider) {
 } ]);
 
 var app = angular.module('myApp', []);
-app.controller('PokeController', function($scope) {
-	console.log($scope);
+app.controller('PokeController',['$scope', '$log', function($scope, $log) {
+	 $scope.$log = $log;
 	$scope.listPoke = [ {
 		"id" : 1,
 		"name" : "Pikachu"
@@ -35,5 +35,5 @@ app.controller('PokeController', function($scope) {
 	];
 
 	
-});
+}]);
 
