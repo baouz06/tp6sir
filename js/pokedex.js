@@ -8,8 +8,16 @@ pokeApp.config([ '$resourceProvider', function($resourceProvider) {
 } ]);
 
 var app = angular.module('myApp', []);
-app.controller('PokeController',['$scope', '$log', function($scope, $log) {
-	 $scope.$log = $log;
+
+app.controller('PokeController',['$scope', '$log','$http', function($scope, $log,$http) {
+	//recuperations des pokemonspar le service $http
+	 $http.get("http://pokeapi.co/api/v2/pokemon/psyduck/")
+	  .then(function(response) {
+	      $scope.pokemons = response.data;
+	  });
+	
+	$scope.$log = $log;
+	
 	$scope.listPoke = [ {
 		"id" : 1,
 		"name" : "Pikachu"
