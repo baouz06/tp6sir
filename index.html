@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="css/bootstrap.min.css" />
 
 </head>
-<body ng-app="myApp">
+<body ng-app="pokedex">
 
 	<div ng-controller="PokeController">
 		IdP: <input type="text" ng-model='idPok'></br>
@@ -24,10 +24,15 @@
 
 	
 	 <div>
-	   <h4 style="color:red;text-align:center">la liste des pokémons obtenus par $http :</h4> {{pokemons}}
+<!-- 	   <h4 style="color:red;text-align:center">la liste des pokémons obtenus par $http :</h4> {{pokemons|filter:nomPok}} -->
 	</div>
 	</div>
-	
+	<div  ng-controller="pokeServiceController">
+	 <h3> partie 2: affichage des information en utilisant un service</h3>
+	    id:{{pake.id}}</br>
+	    nom:  {{pake.name}} </br>
+	    moves: {{pake.moves}} 
+	</div>
 
 
 	<!-- Dependencies -->
