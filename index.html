@@ -9,29 +9,26 @@
 </head>
 <body ng-app="pokedex">
 
-	<div ng-controller="PokeController">
-		IdP: <input type="text" ng-model='idPok'></br>
-		Nom: <input type="text" ng-model="nomPok">
-		<button ng-click="$log.log(nomPok)">Go</button>
-		<h3>la liste des pokémons</h3>
-    	<select > 
-    	         
-           		<option ng-repeat="poke in listPoke |filter:idPok |filter:nomPok"> {{poke}} </option>
-    	</select>
-            </br> </br> </br> 
-         <strong > veuillez remplir les champs id et nom pour les faire aparaite en dessous</strong>
-          		 <p> id et nom : {{idPok+ " " + nomPok}} </p>
+	<div ng-controller="pokeServiceController">
+		IdP: <input type="text" ng-model='idPok'></br> Nom: <input
+			type="text" ng-model='nomPok'> <select ng-model="selected">
+			<option ng-repeat="poke in pokemons |filter:idPok |filter: nomPok">
+				{{poke.pokemon_species.name}} {{poke.entry_number}}</option>
+		</select>
+		<button ng-click="afficher()">Go</button>
+		<div>
+			<h3>partie 2: affichage des information en utilisant $watch</h3>
+			<strong style="color: blue">{{pokemonselected}}</strong>
+		</div>
+		<div>
+			<strong style="color: red">{{pake2}}</strong>
+		</div>
+	</div>
+	</div>
+	<div ng-controller="pokeServiceController">
+		<h3>partie 2: affichage des information en utilisant un service</h3>
+		id: {{pake.id}}</br> nom: {{pake.name}} </br>
 
-	
-	 <div>
-<!-- 	   <h4 style="color:red;text-align:center">la liste des pokémons obtenus par $http :</h4> {{pokemons|filter:nomPok}} -->
-	</div>
-	</div>
-	<div  ng-controller="pokeServiceController">
-	 <h3> partie 2: affichage des information en utilisant un service</h3>
-	    id:{{pake.id}}</br>
-	    nom:  {{pake.name}} </br>
-	    moves: {{pake.moves}} 
 	</div>
 
 
