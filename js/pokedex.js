@@ -56,7 +56,12 @@ pokeApp.controller('pokeServiceController', function($scope, pokeService,
 		$scope.pokemonselected = value;
 	});
 
-});
+}).directive('pokedex', function() {
+    return {
+        restrict: 'E',
+        templateUrl: 'pokedex.html'
+      };
+    });;
 
 pokeApp.controller('PokeController', [ '$scope', '$log', '$http',
 		function($scope, $log, $http) {
